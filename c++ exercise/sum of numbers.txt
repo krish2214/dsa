@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+
+int SumOfNumber(int n){
+    int sum = 0;
+    while(n>0){
+        int lastdigit = n%10;
+        n/=10;
+        sum+=lastdigit;
+    }
+    return sum;
+}
+
+int main(){
+    int n;
+    cout << "Enter the number : ";
+    cin >> n;
+    cout << "Sum of " << n << " = " << SumOfNumber(n) << endl;
+    return 0;
+}

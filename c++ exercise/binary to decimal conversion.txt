@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int binaryTOdecimal(int n){
+    int rem, ans=0, power=1;
+    while(n!=0){
+        rem = n%10;
+        n/=10;
+        ans+=rem*power;
+        power*=2;
+    }
+    return ans;
+}
+
+int main(){
+    int n;
+    cout << "Enter a binary base number : ";
+    cin >> n;
+    cout << "decimal form of " << n << " is " << binaryTOdecimal(n) << endl;
+    return 0;
+}

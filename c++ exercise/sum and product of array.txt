@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+int multiplication(int arr[], int size, int product){
+    for(int i=0; i<size; i++){
+        product*=arr[i];
+    }
+    return product;
+}
+
+int addition(int arr[], int size, int sum){
+    for(int i=0; i<size; i++){
+        sum+=arr[i];
+    }
+    return sum;
+}
+
+int main(){
+    int arr[]={1, 2, 3, 4, 5, 6, 7};
+    int size = 7;
+    int sum = 0;
+    int product = 1;
+    sum = addition(arr, size, sum);
+    product = multiplication(arr, size, product);
+    cout << "Sum = " << sum << endl;
+    cout << "Product = " << product << endl;
+    return 0;
+}
